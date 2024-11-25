@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #121212; /* Dark background */
+    --table-bg-color: #1f1f1f; /* Slightly lighter dark gray for table */
+    --table-border-color: #333333; /* Light border for contrast */
+    --hover-color: #444444; /* Dark hover effect */
+    --accent-color: #7f4eff; /* Elegant purple accent */
+    --accent-hover-color: #9c66ff; /* Lighter purple for hover effects */
+    --font-color: #e0e0e0; /* Light font color for readability */
+    --highlight-color: #00bcd4; /* Teal highlight color */
+    --highlight-hover-color: #26c6da; /* Lighter teal for hover */
+    --unfocus-color: #6c757d; /* Muted text color for unfocused elements */
+    --def-font: 'Roboto', 'Open Sans', sans-serif; /* Font family */
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--def-font);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--font-color);
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+}
+
+.table-container {
+    padding: 20px;
+  
+}
+
+.time-table {
+    width: 100%;
+    
+    border-spacing: 0;
+    border: 1px solid var(--table-border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background-color: var(--table-bg-color); /* Dark table background */
+}
+
+.time-table th,
+.time-table td {
+    padding: 15px;
+    border: 1px solid var(--table-border-color);
+    text-align: center;
+    color: var(--font-color); /* Light text color */
+}
+
+.time-table th {
+    background-color: var(--accent-color); /* Purple accent for table headers */
+    color: #ffffff; /* White text for headers */
+    font-weight: bold;
+}
+
+.time-table td {
+    background-color: var(--table-bg-color); /* Table cell background */
+}
+
+.time-table td:hover {
+    background-color: var(--hover-color); /* Darker gray on hover */
+    transition: background-color 0.3s ease;
+}
+
+.time-table td.highlight {
+    background-color: var(--highlight-color); /* Teal color for highlighted cells */
+    color: #000000; /* Dark text for highlighted cells */
+}
+
+.time-table td.highlight:hover {
+    background-color: var(--highlight-hover-color); /* Lighter teal on hover */
+}
+
+.time-table td:empty {
+    background-color: var(--bg-color); /* Empty cells blend with background */
+}
+
+@media (max-width: 768px) {
+    .time-table th, .time-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
